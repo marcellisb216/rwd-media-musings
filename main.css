@@ -1,0 +1,366 @@
+/*---------------------------------------
+	SITE: UCBA eMedia Musings
+---------------------------------------*/
+
+
+/* GLOBAL SETTINGS
+---------------------------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+   background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%, #ff9a9e 150%);
+   height: 100vh;
+}
+	
+div.wrapper {
+width: 960px;
+margin: 1em auto 0 auto;
+border: 2px solid rgb(255, 0, 0);
+box-shadow: 2px 2px 6px black;
+background-color: white;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+
+/* HEADER
+---------------------------------------*/
+	
+header {
+background-color: #ff6f61;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 2em 1em;
+margin-bottom: .5em;
+}
+
+
+header div.sitename { /* ← contains both the h1 and h2 */
+
+}
+
+header h1 {
+font-size: 220%;
+font-family: Comfortaa, cursive;
+margin-bottom: .25em;
+}
+
+header h1 a {
+color: rgb(255, 255, 255);
+text-decoration: none;
+}
+
+header h2 {
+font-family: Comfortaa;
+font-size: 105%;
+}
+
+
+
+/* MAIN NAVIGATION 
+---------------------------------------*/	
+
+nav.topnav { /* ← entire navigation area */
+background-color: #e8e8e8;
+border-radius: 2em;
+}
+
+nav.topnav ul {
+	list-style-type: none;
+	display: flex;
+   font-family: Comfortaa;
+}
+
+nav.topnav li {
+
+}
+
+nav.topnav a {
+	padding: 1em 2em;
+	text-transform: uppercase;
+	display: block;
+	text-decoration: none;
+	color: rgb(20, 20, 20); /* ← you can change this */
+}
+
+nav.topnav a:hover {
+	background-color: ghostwhite; /* ← you can change this */
+	border-radius: 2em;
+}
+
+
+
+/* HOMEPAGE LAYOUT
+---------------------------------------*/	
+main.homepage {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr ;
+grid-gap: 1em;
+}
+
+article.blog {
+grid-column: 1/4;
+grid-row: 1/3;
+padding: 1em;
+}
+
+article.blog h2 { /* ← blog heading */
+font-family: Comfortaa, cursive;
+font-size: 150%;
+border-bottom: 1px solid black ;
+}
+
+article.blog p { /* ← blog text */
+font-size: 130%;
+line-height: 1.3;
+}
+
+main.homepage aside { /* ← both asides */
+background-color: #e8e8e8;
+border-radius: 2em;
+padding: 1em;
+}
+
+main.homepage aside.recent {
+grid-column: 4/5;
+grid-row: 1/2;
+}
+
+main.homepage aside.links {
+grid-column: 4/5;
+grid-row: 2/3;
+}
+
+main.homepage aside h3 { /* ← h3s in asides */
+font-family: Comfortaa, cursive;
+margin-bottom: .5em;
+}
+
+main.homepage aside ul { /* ← lists in the asides */
+
+}
+
+main.homepage aside li { /* ← items in the aside lists */
+margin: 0 0 .5em 1em;
+}
+
+main.homepage aside li a { /* ← links in the asides */
+
+}
+
+main.homepage aside li a:hover { 
+
+}
+
+
+
+/* CAMPUS AREA
+---------------------------------------*/
+
+section.campus	{
+background-color: #e8e8e8;
+border-radius: 2em;
+grid-column: 1/5;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-gap: 1em;
+padding: 1em;
+}	
+
+section.campus section { /* ← all 6 of the building sections */
+
+}
+
+section.campus h3 {
+font-family: Comfortaa, cursive;
+font-size: 105%;
+
+}
+
+section.campus figure {
+font-family: Comfortaa, cursive;
+}
+
+section.campus img {
+	border: 5px solid rgb(255, 255, 255); /* ← you can change this */
+	box-shadow: 2px 2px 5px #959595; /* ← you can change this */
+}
+
+section.campus figcaption {
+font-size: 80%;
+}
+
+
+
+/* FOOTER
+---------------------------------------*/
+
+footer {
+background-color: #ff6f61;
+padding: 1em 2em;
+margin-top: .5em;
+font-family: Comfortaa, cursive;
+}
+
+footer p { 
+
+}
+
+
+/* TABLET
+---------------------------------------*/
+
+@media (max-width: 768px) {
+   div.wrapper {
+      width: 95%;
+   }
+
+   img {
+      max-width: 100%;
+   }
+
+   header {
+      text-align: center;
+      flex-direction: column;
+   }
+
+   nav.topnav {
+      margin-top: .5em;
+   }
+
+   main.homepage {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   article.blog {
+      grid-column: 1/3;
+      grid-row: 1/2;
+   }
+
+   main.homepage aside.recent {
+      grid-column: 1/2;
+      grid-row: 2/3;
+   }
+
+   main.homepage aside.links {
+      grid-column: 2/3;
+      grid-row: 2/3;
+   }
+
+   section.campus {
+      grid-column: 1/3;
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+
+   section.campus figure {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: .75em;
+      align-items: center;
+   }
+
+   article.blog h2 {
+      font-size: 170%;
+   }
+
+   article.blog p {
+      line-height: 1.4;
+      font-size: 135%;
+      margin-bottom: 0;
+   }
+
+   main.homepage aside h3 {
+      font-size: 170%;
+   }
+
+   main.homepage aside li {
+      margin-bottom: 1.5em;
+   }
+
+   main.homepage aside a {
+      padding: .5em;
+   }
+
+   section.campus h3 {
+      font-size: 125%;
+   }
+
+   section.campus figcaption {
+      font-size: 90%;
+   }
+}
+
+
+/* PHONE
+---------------------------------------*/
+
+@media (max-width: 480px) {
+   
+   div.wrapper {
+      width: 100%;
+      margin: 0;
+   }
+
+   header {
+      margin: 0;
+      padding: 1em;
+   }
+
+   nav.topnav {
+   width: 98%;
+   margin-bottom: .5em;
+   }
+
+   nav.topnav ul {
+      flex-direction: column;
+
+}
+   nav.topnav li {
+      border-bottom: 1px solid black;
+   }
+
+   nav.topnav li:last-of-type {
+      border: none;
+   }
+
+   main.homepage {
+      grid-template-columns: 1fr;
+  }
+  
+  article.blog {
+      grid-column: 1/2;
+  }
+  
+  main.homepage aside {
+      display: none;
+  }
+  
+  section.campus {
+      grid-template-columns: 1fr;
+      grid-gap: 1em;
+  }
+  
+  section.campus h3 {
+      font-size: 150%;
+  }
+  
+  section.campus-figure {
+   grid-template-columns: 1fr 4fr;
+   background-color: white;
+   padding: 0 1em 0 1;
+   border-radius: 1em;
+   }
+
+section.campus-figure figcaption {
+   font-size: 140%;
+   line-height: 1.4;
+   }
+}
+
